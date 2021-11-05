@@ -7,7 +7,7 @@ Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "multistage-azure-pipeline-a
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{62D41773-F4FF-4094-8E41-976467215D5A}"
 	ProjectSection(SolutionItems) = preProject
-		automating multistage azure pipelines.png = automating multistage azure pipelines.png
+		automating_multistage_azure_pipelines.png = automating_multistage_azure_pipelines.png
 		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
 		CONTRIBUTING.md = CONTRIBUTING.md
 		LICENSE = LICENSE
