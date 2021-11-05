@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "armtemplateparam_logicAppName": {
+      "value": "replace with your logic app name"
+    },
+    "armtemplateparam_azdevopsorganization": {
+      "value": "replace with your devops org name"
+    },
+    "armtemplateparam_azdevopsproject": {
+      "value": "replace with your devops project name"
+    },
+    "armtemplateparam_azdevopspattoken": {
+      "value": "change this param definition in arm template to securestring and fetch the token from keyvault. Use this param directly for development only"
+    }
+  }
+}
