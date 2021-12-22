@@ -1,6 +1,6 @@
 # Using Logic App to Automate Azure DevOps Multistage Pipelines 
 
-This is an Azure Resource Group Project
+This repository contains an Azure Resource Group Project
 that provisions an Azure Logic App. The Logic App interacts with Azure DevOps API to automate the provisioning of Multi Stage Pipelines
 
 The source code contains the following files
@@ -8,13 +8,13 @@ The source code contains the following files
 - **LogicApp.json** - ARM template that provisions the logic app
 - **LogicApp.parameters.json** - Parameter file that is passed as inputs to ARM template to provision the Logic App
 
->Replace the paramters with relevant values 
+>Replace the parameters with relevant values for azure devops organization, project and the PAT token.
 
->After Development, be sure to save secrets as securestring and fetch the secret from azure keyvault
+>After Development phase, be sure to save ARM template secrets as securestring. Most importantly fetch those secret from azure keyvault
 
 ## Prerequisites
 
-To deploy the project from within your local machine, you can use Visual Studio IDE with Azure development workload installed
+You need the following pre-requisites to deploy the project
 
 - An Azure Subscription with some credits
 - An Azure DevOps Account with project administrator role
@@ -24,11 +24,12 @@ To deploy the project from within your local machine, you can use Visual Studio 
 
 ## Deploy Azure Resources
 
-Follow steps below to deploy ARM template from within Visual Studio
+You can choose to deploy this project from *Visual Studio* or using *Azure Cloud Shell*
+The steps below show how to deploy ARM template from within Visual Studio
 
  - [Creating and deploying Azure resource groups through Visual Studio](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/create-visual-studio-deployment-project)
   
-Alternatively, you can also choose to run the deployment script, from within [Azure Cloud Shell](https://shell.azure.com), clone this repository to your local machine, switch **to the `multistage-azure-pipeline-automation-logicapp` folder** and upload the template & paramter json files to clouddrive
+Alternatively, you can also choose to run the deployment script, from within [Azure Cloud Shell](https://shell.azure.com), clone this repository to your local machine, switch to the `multistage-azure-pipeline-automation-logicapp` folder and upload the template & paramter json files to clouddrive
 
 ![Azure Cloud Shell](screenshots/azure-cloud-shell.png)
 
@@ -37,10 +38,10 @@ Now run the following commands :
 ```shell
 az group create \
   --name azdevops-multistage-pipelines \
-  --location "West US"
+  --location "West Europe"
 az deployment group create \
   --name prodenvironment \
-  --resource-group myResourceGroupProd \
+  --resource-group azdevops-multistage-pipelines \
   --template-file LogicApp.json \
   --parameters LogicApp.parameters.json
 ```
