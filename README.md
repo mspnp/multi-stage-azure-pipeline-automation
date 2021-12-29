@@ -1,7 +1,6 @@
 # Using Logic App to Automate Azure DevOps Multistage Pipelines 
 
-This repository contains an Azure Resource Group Project
-that provisions an Azure Logic App. The Logic App interacts with Azure DevOps API to automate the provisioning of Multi Stage Pipelines
+This repository explains the deployment scenario of the [reference architecture](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/devops/automate-azure-pipelines) published in azure architecture center. It contains an Azure Resource Group Project that provisions an Azure Logic App. The Logic App interacts with Azure DevOps API to automate the provisioning of Multi Stage Pipelines
 
 The source code contains the following files
 
